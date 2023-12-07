@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+        <!-- Font-Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha384-bS/HUig6kF0d8tclVGHPXpbm3Wv8P7kE1uLXa02z2K0ZR0r06WtKa4lX3fyzf3x8" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <!-- Bootsrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+        <title>Books Blog</title>
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav_checkbox">
+                <a href="#" class="logo"><img class="logo_header" src="/proyecto/assets/logo.png" alt=""></a>
+                <input type="checkbox" id="tab-nav" class="tab-nav">
+                <label for="tab-nav" class="label">
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                </label>
+                <ul class="content_nav">
+                    <li><a href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('foro') }}">FORO</a></li>
+                    <li><a href="{{ url_for('visualizar_productos') }}">LIBROS</a></li>
+                    <li><a href="{{ url_for('form') }}">INSCRIBITE</a></li>
+                    <li><a href="{{ url_for('productos') }}">GESTOR DE LIBROS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="testimonios">
+        <div class="testimonios_cabecero">
+            <span>Bienvenido al Foro!</span>
+            <h1>Comenta lo que quieras...</h1>
+        </div>
+        <div class="testimonios_container">
+            <div class="testimonio_item">
+                <div class="item_top">
+                    <div class="perfil">
+                        <div class="perfil_img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="usuario">
+                            <strong>DIEGO</strong>
+                            <span>@diegox</span>
+                        </div>
+                    </div>
+                    <div class="opinion">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> 
+                    </div>
+                </div>
+                <div class="comentarios">
+                    <p>"Harry Potter y la piedra filosofal" ha sido elogiado por su imaginación, personajes entrañables y la creación de un mundo mágico fascinante. También aborda temas como la amistad, el valor y la lucha entre el bien y el mal. La serie en su conjunto ha dejado una marca duradera en la literatura y la cultura popular. Sin embargo, las opiniones pueden variar según los gustos individuales de cada lector.</p>
+                </div>
+            </div>
+            <div class="testimonio_item">
+                <div class="item_top">
+                    <div class="perfil">
+                        <div class="perfil_img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="usuario">
+                            <strong>JOSE</strong>
+                            <span>@joseph</span>
+                        </div>
+                    </div>
+                    <div class="opinion">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> 
+                    </div>
+                </div>
+                <div class="comentarios">
+                    <p>La obra de Carroll es conocida por su imaginación desbordante, su juego con el lenguaje y sus elementos de lógica ilógica. A través de la historia de Alicia, Carroll explora temas como la identidad, el cambio y la absurdez de las reglas sociales y las convenciones.</p>
+                </div>
+            </div>
+            <div class="testimonio_item">
+                <div class="item_top">
+                    <div class="perfil">
+                        <div class="perfil_img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="usuario">
+                            <strong>MARIA</strong>
+                            <span>@marmail</span>
+                        </div>
+                    </div>
+                    <div class="opinion">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> 
+                    </div>
+                </div>
+                <div class="comentarios">
+                    <p>La ciencia ficción proporciona un escape de la realidad cotidiana al transportar a los lectores a mundos completamente diferentes. Este tipo de escapismo puede ser emocionante y liberador.</p>
+                </div>
+            </div>
+            <div class="testimonio_item">
+                <div class="item_top">
+                    <div class="perfil">
+                        <div class="perfil_img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="usuario">
+                            <strong>KARINA</strong>
+                            <span>@kar_ina</span>
+                        </div>
+                    </div>
+                    <div class="opinion">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> 
+                    </div>
+                </div>
+                <div class="comentarios">
+                    <p>El romanticismo a menudo se caracteriza por su enfoque en la emoción intensa y la expresión de sentimientos profundos. Las personas que encuentran esto espectacular pueden apreciar la capacidad del romanticismo para evocar emociones poderosas.</p>
+                </div>
+            </div>
+            <div class="testimonio_item">
+                <div class="item_top">
+                    <div class="perfil">
+                        <div class="perfil_img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="usuario">
+                            <strong>CARLOS</strong>
+                            <span>@carlitos</span>
+                        </div>
+                    </div>
+                    <div class="opinion">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> 
+                    </div>
+                </div>
+                <div class="comentarios">
+                    <p>Hablando sobre el arte de la guerra tiene enfoque en la astucia y la sabiduría como medios para la victoria, sin depender exclusivamente de la fuerza bruta, ha llevado a que sus enseñanzas sean aplicadas en una variedad de disciplinas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="content_footer">
+                <h2>Books Blog</h2>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Productos</a></li>
+                </ul>
+            <div class="cuentas">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i> 
+            </div>
+        </div>
+
+        <!-- <p class="copyright">Todos los derechos reservados &copy; 2023</p> -->
+    </footer>
+<!-- Font-Awesome -->
+<script src="https://kit.fontawesome.com/709d7bb112.js" crossorigin="anonymous"></script>
+<!-- JS -->
+<script src="/script.js"></script>
+</body>
+</html>

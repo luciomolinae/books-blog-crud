@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha384-bS/HUig6kF0d8tclVGHPXpbm3Wv8P7kE1uLXa02z2K0ZR0r06WtKa4lX3fyzf3x8" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <title>Books Blog</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav_checkbox">
+                <a href="#" class="logo"><img class="logo_header" src="/proyecto/assets/logo.png" alt=""></a>
+                <input type="checkbox" id="tab-nav" class="tab-nav">
+                <label for="tab-nav" class="label">
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                </label>
+                <ul class="content_nav">
+                    <li><a href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('foro') }}">FORO</a></li>
+                    <li><a href="{{ url_for('visualizar_productos') }}">LIBROS</a></li>
+                    <li><a href="{{ url_for('form') }}">INSCRIBITE</a></li>
+                    <li><a href="{{ url_for('productos') }}">GESTOR DE LIBROS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form_form">
+
+        <div class="container container d-flex flex-column align-items-center text-white font-weight-bold">
+            <h1>Formulario de Inscripción</h1>
+            <form class="needs-validation" novalidate action="https://formspree.io/f/mbjvqggv" method="POST">
+                <div class="form-group mb-4">
+                    <label for="nombreCompleto">Nombre Completo<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control-sm" id="nombreCompleto" name="nombreCompleto" required>
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="correoElectronico">Correo Electrónico<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control-sm" id="correoElectronico" name="correoElectronico" required>
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="nombreUsuario">Nombre de Usuario<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control-sm" id="nombreUsuario" name="nombreUsuario" required>
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="contrasena">Contraseña<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control-sm" id="contrasena" name="contrasena" required>
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="intereses">Intereses de Lectura<span class="text-danger">*</span></label>
+                    <select class="form-control-sm" id="intereses" name="intereses" required>
+                        <option value="ficcion">Ficción</option>
+                        <option value="noFiccion">No Ficción</option>
+                        <option value="cienciaFiccion">Ciencia Ficción</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="pais">País o Región<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control-sm" id="pais" name="pais" required>
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="autorFavorito">Autor Favorito</label>
+                    <input type="text" class="form-control-sm" id="autorFavorito" name="autorFavorito">
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="libroFavorito">Libro Favorito</label>
+                    <input type="text" class="form-control-sm" id="libroFavorito" name="libroFavorito">
+                    <div class="valid-feedback"> Campo Correcto </div>
+                    <div class="invalid-feedback"> Campo Incorrecto </div>
+                </div>
+                <button type="submit" class="btn btn-success mb-4">Enviar</button>
+            </form>
+        </div>
+
+    </main>
+        
+    <footer>
+        <div class="content_footer">
+                <h2>Books Blog</h2>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Productos</a></li>
+                </ul>
+            <div class="cuentas">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i> 
+            </div>
+        </div>
+        <!-- <p class="copyright">Todos los derechos reservados &copy; 2023</p> -->
+    </footer>
+<!-- JS -->
+<script src="/script.js"></script>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Fontawesome -->
+<script src="https://kit.fontawesome.com/709d7bb112.js" crossorigin="anonymous"></script>
+</body>
+</html>
